@@ -35,21 +35,21 @@ User.init(
     },
   },
   {
-    // hooks: {
-    //   // hash the user's password upon signup
-    //   async signUpPassword(newUserData) {
-    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
-    //     return newUserData;
-    //   },
-    //   // hash the user's password upon update
-    //   async changePass(updatedUserData) {
-    //     updatedUserData.password = await bcrypt.hash(
-    //       updatedUserData.password,
-    //       10
-    //     );
-    //     return updatedUserData;
-    //   },
-    // },
+    hooks: {
+      // hash the user's password upon signup
+      async beforeCreate(newUserData) {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      // hash the user's password upon update
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
+        return updatedUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,

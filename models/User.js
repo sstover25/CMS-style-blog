@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connections");
+const sequelize = require("../config/connection");
 const bcrypt = require("bcrypt");
 
 // Creating the User model
@@ -15,7 +15,6 @@ User.init(
   {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
@@ -23,6 +22,9 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+      validate: {
+        len: [1],
+      },
     },
     password: {
       type: DataTypes.STRING,
@@ -33,21 +35,21 @@ User.init(
     },
   },
   {
-    hooks: {
-      // hash the user's password upon signup
-      async signUpPassword(newUserData) {
-        newUserData.password = await bcrypt.hash(newUserData.password, 10);
-        return newUserData;
-      },
-      // hash the user's password upon update
-      async changePass(updatedUserData) {
-        updatedUserData.password = await bcrypt.hash(
-          updatedUserData.password,
-          10
-        );
-        return updatedUserData;
-      },
-    },
+    // hooks: {
+    //   // hash the user's password upon signup
+    //   async signUpPassword(newUserData) {
+    //     newUserData.password = await bcrypt.hash(newUserData.password, 10);
+    //     return newUserData;
+    //   },
+    //   // hash the user's password upon update
+    //   async changePass(updatedUserData) {
+    //     updatedUserData.password = await bcrypt.hash(
+    //       updatedUserData.password,
+    //       10
+    //     );
+    //     return updatedUserData;
+    //   },
+    // },
     sequelize,
     timestamps: false,
     freezeTableName: true,
@@ -56,4 +58,4 @@ User.init(
   }
 );
 
-module.exports.User;
+module.exports = User;

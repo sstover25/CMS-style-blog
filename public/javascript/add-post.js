@@ -1,3 +1,20 @@
+function openForm(event) {
+  let i, newPostContainer, newPost;
+
+  newPostContainer = document.getElementsByClassName("new-post-container");
+  for (i = 0; i < newPostContainer.length; i++) {
+    newPostContainer[i].style.display = "none";
+  }
+
+  newPost = document.getElementsByClassName("newpost");
+  for (i = 0; i < newPost.length; i++) {
+    newPost[i].className = newPost[i].className.replace("active", "");
+  }
+
+  document.getElementById("NewPost").style.display = "flex";
+  event.currentTarget.className += "active";
+}
+
 async function newFormHandler(event) {
   event.preventDefault();
 

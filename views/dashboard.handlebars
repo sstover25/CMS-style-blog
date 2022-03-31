@@ -1,6 +1,10 @@
 <section>
   <h2>Create a New Post</h2>
-
+  <main class='card'>
+    <div class='tab'>
+        <button class="newpost" onclick="openForm(event, 'NewPost')">New Post</button>
+    </div>
+    <div id="NewPost" class="new-post-container">
   <form class="new-post-form">
     <div>
       <label for="post-title">Title</label>
@@ -12,8 +16,9 @@
     </div>
     <button type="submit" class="btn">Post!</button>
   </form>
+  </div>
 </section>
-
+</main>
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>

@@ -4,25 +4,25 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Techie's Unite</title>
+        <title>Techie's Unite!</title>
         <link rel="stylesheet" href="/stylesheets/style.css">
     </head>
 
     <body>
         <div class="wrapper">
             <header>
-                <nav>
-                    <a href="/">Home</a>
-                    <a href="/dashboard">Dashboard</a>
-                    {{#if loggedIn}}
-                    <button id="logout" class="btn-no-style">Logout</button>
-                    {{else}}
-                    <a href="/login">Login</a>
-                    {{/if}}
-                </nav>
                 <h1>
                     <a href="/">Techie's Unite</a>
                 </h1>
+                <nav>
+                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/dashboard">Dashboard</a>
+                    {{#if loggedIn}}
+                    <button id="logout" class="btn-no-style nav-link">Logout</button>
+                    {{else}}
+                    <a class="nav-link" href="/login">Login</a>
+                    {{/if}}
+                </nav>
             </header>
             <main>
                 {{{body}}}

@@ -8,7 +8,7 @@ function openForm(event, formName) {
 
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace("active", "");
+    tablinks[i].style.display = "active";
   }
 
   document.getElementById(formName).style.display = "flex";

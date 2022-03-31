@@ -1,3 +1,10 @@
+:root {
+  --primary-color: rgb(25, 12, 31);
+  --secondary-color: rgba(212, 166, 14, 0.979);
+  --tertiary-color: rgb(66, 212, 37);
+  --main-background: grey;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -8,33 +15,23 @@ html {
   padding: 0;
   margin: 0;
   font-family: sans-serif;
-  color: #333;
+  color: black;
+  background-color: var(--main-background);
 }
 
 a {
   text-decoration: none;
-  color: #225ca3;
-  font-weight: bold;
-  transition: color 0.1s;
-}
-
-a:hover {
-  color: #3486eb;
+  color: var(--primary-color);
 }
 
 button {
-  background-color: #225ca3;
+  background-color: var(--tertiary-color);
   border: 0;
   padding: 1%;
-  color: white;
+  color: var(--primary-color);
   font-weight: bold;
-  transition: background-color 0.1s;
   cursor: pointer;
   border-radius: 5px;
-}
-
-button:hover {
-  background-color: #3486eb;
 }
 
 .post-list {
@@ -71,7 +68,7 @@ form label {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1200px;
+
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -83,10 +80,27 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1%;
+  background-color: var(--secondary-color);
+  width: 100%;
+
 }
 
 header h1 {
-  font-size: 1em;
+  font-size: 3em;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 10px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
+}
+
+.nav-link {
+  font-size: 1.75em;
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 main {
@@ -97,19 +111,8 @@ main {
 .btn-no-style {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
   text-decoration: none;
-  color: #225ca3;
-  font-size: 100%;
-  font-weight: bold;
-  transition: color 0.1s;
-  margin-left: 16px;
-}
-
-.btn-no-style:hover {
-  background: none;
-  color: #3486eb;
 }
 
 .delete-post-btn {
@@ -134,15 +137,6 @@ main {
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
-}
-
-.upvote-btn {
-  background-color: #197d0f;
-  transition: background-color 0.1s;
-}
-
-.upvote-btn:hover {
-  background-color: #1f9c13;
 }
 
 .comment-form {
@@ -178,6 +172,12 @@ footer {
   justify-content: center;
   padding: 1%;
   font-size: 110%;
+  background-color: var(--secondary-color);
+}
+
+.tablinks { 
+  padding: 20px;
+  font-size: 1.5em;
 }
 
 .tabcontent {

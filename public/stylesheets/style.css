@@ -2,7 +2,7 @@
   --primary-color: rgb(25, 12, 31);
   --secondary-color: rgba(212, 166, 14, 0.979);
   --tertiary-color: rgb(66, 212, 37);
-  --main-background: grey;
+  --main-background: rgb(214, 203, 203);
 }
 
 * {
@@ -37,6 +37,7 @@ button {
 .post-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 textarea,
@@ -124,14 +125,37 @@ main {
 }
 
 .post {
+  
   margin-bottom: 2%;
   line-height: 150%;
+  align-content: space-between;
 }
 
-.post .title span {
-  font-style: italic;
-  font-size: 90%;
-  color: #7d7d7d;
+.title-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: blue;
+  padding: -5px -10px;
+  border: 2px solid black;
+}
+
+.title h3 {
+  padding-left: 10px;
+  font-size: 25px;
+}
+
+.title span {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.title p {
+  border: 2px solid black;
+  display: flex;
+  margin: auto;
+  min-height: 50px;
+  padding: 5px;
 }
 
 .edit-link {

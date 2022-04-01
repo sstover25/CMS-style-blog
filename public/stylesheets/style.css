@@ -1,8 +1,11 @@
 :root {
-  --primary-color: rgb(25, 12, 31);
-  --secondary-color: rgba(212, 166, 14, 0.979);
-  --tertiary-color: rgb(66, 212, 37);
-  --main-background: rgb(214, 203, 203);
+  --primary-color: #0c1f15;
+  --secondary-color: rgb(86, 233, 56);
+  --tertiary-color: rgb(53, 208, 255);
+  --post-color: rgb(199, 241, 222);
+  --main-background: rgb(185, 250, 210);
+  --button-color: rgb(66, 212, 37);
+  --hover-button-color: rgb(112, 243, 86);
 }
 
 * {
@@ -25,13 +28,21 @@ a {
 }
 
 button {
-  background-color: var(--tertiary-color);
+  background-color: var(--button-color);
   border: 0;
   padding: 1%;
   color: var(--primary-color);
   font-weight: bold;
+  font-size: 1em;
   cursor: pointer;
   border-radius: 5px;
+  min-width: 80px;
+  min-height: 40px;
+  border: 2px solid black;
+}
+
+button:hover {
+  background-color: var(--hover-button-color);
 }
 
 .post-list {
@@ -104,6 +115,13 @@ header h1 {
   align-items: center;
 }
 
+
+.nav-link:hover {
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: inherit;
+}
+
 main {
   flex: 1;
   padding: 2% 4%;
@@ -135,7 +153,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: blue;
+  background-color: var(--tertiary-color);
   padding: -5px -10px;
   border: 2px solid black;
 }
@@ -156,6 +174,7 @@ main {
   margin: auto;
   min-height: 50px;
   padding: 5px;
+  background-color: var(--post-color);
 }
 
 .edit-link {
@@ -182,10 +201,6 @@ main {
   opacity: 0.6;
 }
 
-.new-post-form input {
-  width: 300px;
-}
-
 .edit-post-form {
   margin-bottom: 5%;
 }
@@ -199,8 +214,21 @@ footer {
   background-color: var(--secondary-color);
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-top: none;
+  align-content: center;
+  background-color: rgb(236, 233, 229);
+  justify-content: center;
+  padding-left: 100px;
+  max-width: 400px;
+}
+
+
 .tablinks { 
-  padding: 20px;
+  padding: 10px;
   font-size: 1.5em;
 }
 
@@ -209,6 +237,16 @@ footer {
   padding-left: 20px;
   padding-bottom: 30px;
 } 
+
+.user-input-label {
+  padding: 5px;
+  font-size: 1em;
+}
+
+.user-input {
+  min-height: 30px;
+  padding-bottom: 10px;
+}
 
 .new-post-container {
   display: none;

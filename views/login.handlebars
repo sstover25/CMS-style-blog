@@ -1,4 +1,5 @@
 <main class='card'>
+  <div class="center-form">
     <div class='tab'>
         <button class="tablinks" onclick="openForm(event, 'Login')">Login</button>
         <button class="tablinks" onclick="openForm(event, 'SignUp')">Sign Up</button>
@@ -7,12 +8,12 @@
   <div id="Login" class="tabcontent">
     <form class="login-form grow1">
       <div>
-        <label for="username-login">Username:</label>
-        <input type="text" id="username-login" />
+        <label class="user-input-label" for="username-login">Username:</label>
+        <input class="user-input" type="text" id="username-login" />
       </div>
       <div>
-        <label for="password-login">Password:</label>
-        <input type="password" id="password-login" />
+        <label class="user-input-label" for="password-login">Password:</label>
+        <input class="user-input" type="password" id="password-login" />
       </div>
       <div>
         <button type="submit">Login</button>
@@ -23,18 +24,19 @@
   <div id="SignUp" class="tabcontent">
     <form class="signup-form grow1">
       <div>
-        <label for="username-signup">Username:</label>
-        <input type="text" id="username-signup" />
+        <label class="user-input-label" for="username-signup">Username:</label>
+        <input class="user-input" type="text" id="username-signup" />
       </div>
       <div>
-        <label for="password-signup">Password:</label>
-        <input type="password" id="password-signup" />
+        <label class="user-input-label" for="password-signup">Password:</label>
+        <input class="user-input" type="password" id="password-signup" />
       </div>
       <div>
         <button type="submit">Sign Up</button>
       </div>
     </form>
     </div>
+  </div>
 </main>
 
 <script src="/javascript/login.js"></script>

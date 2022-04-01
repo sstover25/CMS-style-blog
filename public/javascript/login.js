@@ -9,6 +9,8 @@ function openForm(event, formName) {
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.display = "active";
+    tablinks[i].style.padding = "10px";
+    tablinks[i].style.fontSize = "1.5em";
   }
 
   document.getElementById(formName).style.display = "flex";

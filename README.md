@@ -46,7 +46,7 @@ The following image demonstrates the application functionality:
 You are required to submit the following for review:
 
 - The URL of the functional, deployed application: https://rhubarb-cupcake-18535.herokuapp.com/
-- The URL of the GitHub repository: https://github.com/sstover25/e-commerce-back-end
+- The URL of the GitHub repository: https://github.com/sstover25/CMS-style-blog
 
 ---
 
